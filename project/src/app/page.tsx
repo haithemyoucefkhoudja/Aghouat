@@ -1,6 +1,6 @@
 
 export default async function Page() {
-/*
+
             <aside className="Content bc-light-grey pt-5 flex-grow-1">
                 <header className="px-4">
                     <h1 className="s40 fw-bold mb-2">Hello UserName!</h1>
@@ -41,7 +41,6 @@ export default async function Page() {
 
             </aside>
 
-*/
 
   return (
     <aside></aside>
