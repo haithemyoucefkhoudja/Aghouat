@@ -13,20 +13,20 @@ function Group({GroupInfo}:{GroupInfo:GroupInfo}) {
       </div>
     </article>*/
     <>
-        <li className="py-3 sm:py-4 tw-px-5">
+        <li className="py-3 sm:py-4 ">
                 <div className="flex items-center">
                     <div className="flex-shrink-0">
                     </div>
                     <div className="flex-1 min-w-0 ms-4">
                     {Object.entries(GroupInfo).map(([key, value]) => (
-                        <div className="tw-mb-5">
+                        <div className="tw-mb-5" key={key}>
                         <p className="tw-text-lg tw-font-medium tw-text-gray-900 tw-truncate">
                         {key}
                     </p>
                     <p className="tw-text-md text-gray-500 truncate ">
                         {value}
                     </p>
-                    <hr></hr>
+                    <hr className="mx-auto"></hr>
                     </div>
           ))}
 
@@ -42,9 +42,9 @@ export const Groups = ({GroupsInfo}:{GroupsInfo:GroupInfo[]}) => {
         
         <div className="Boxes tw-grid tw-gr tw-gap-4  p-4">
         {GroupsInfo.map((info:GroupInfo, key_:number) => ( 
-        <div className="tw-w-full tw-max-w-md  tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg  tw-shadow tw-sm:p-8 ">
-            <header className=" tw-bg-gradient-to-b tw-from-sky-400 tw-to-blue-400 tw-h-12 tw-container tw-my tw-rounded-lg">
-            <h5 className="tw-text-xl tw-font-bold tw-leading-none tw-text-white ">GROUP {key_}</h5>
+        <div className="tw-w-full tw-max-w-md  tw-bg-white tw-border tw-border-gray-200 tw-rounded-lg  tw-shadow tw-sm:p-8 " key={key_ *52}>
+            <header className=" tw-bg-gradient-to-b tw-from-sky-400 tw-to-blue-400 tw-h-12 tw-container tw-my tw-rounded-lg f-center">
+            <h5 className="tw-text-xl tw-font-bold tw-leading-none tw-text-white ">GROUP {key_ + 1}</h5>
             </header>
     <div className="tw-flex tw-items-center justify-between mb-4">        
    </div>

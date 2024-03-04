@@ -72,16 +72,7 @@ export default function RootLayout({
                         <h1 className="s40 c-text fw-bold mb-2">Hello UserName!</h1>
                         <p className="c-grey">Is there anything specific you would like me to look up? </p>
                     </div>
-                    <div className="Profile d-flex align-items-center gap-3">
-                        <div>
-                            <p className="c-text fw-bold s18">UserName</p>
-                            <p className="c-grey">Student</p>
-                        </div>
-                        <Image src={Avatar} sizes="10vh" alt="haithem" className="rounded-circle" style={{
-        width: '100%',
-        height: 'auto',
-      }}></Image>
-                    </div>
+                    
                     <div className="input-container position-relative w-100 bc-white rounded-pill mx-auto mt-3" style={{flexBasis:'100%'}}>
                         <i className="fa-solid fa-magnifying-glass position-absolute pointer trans3 s20"></i>
                         <input type="text" id="input" required={true}/>

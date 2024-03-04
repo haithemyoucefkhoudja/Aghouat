@@ -31,8 +31,8 @@ export default async function Page() {
                             <span >Date of birth</span>
                         </div>
                         <div className="Inputs d-flex gap-3">
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="Ain Kercha" readonly />
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="2004-02-09" readonly />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value="Ain Kercha" />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value="2004-02-09"  />
                         </div>
                     </div>
                     <div className="Row">
@@ -42,9 +42,9 @@ export default async function Page() {
                             <span>Baccalaureate year</span>
                         </div>
                         <div className="Inputs d-flex gap-3">
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="14.5" readonly />
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="SCIENCES EXPERIMENTALES" readonly />
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="2019" readonly />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value="14.5"  />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value="SCIENCES EXPERIMENTALES"  />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value="2019"  />
                         </div>
                     </div>
                 </article>
