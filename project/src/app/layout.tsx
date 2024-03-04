@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import './styles/customCss.css'
+import "./styles/Normalize/Normalize.css"
+import './styles/main.css'
+import './styles/Icons 6.4.0/css/all.min.css'
+import Image from "next/image";
+import Avatar from "@/public/Avatar.png"
+import { NavBar } from "@/components/nav";
+const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +22,69 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={open_sans.className}>
+      <NavBar/>
+      <main className="Container bc-white d-flex my-5 mx-auto rd-20 shadow bd-b-blue-5">
+
+<aside className="NavBar py-4 d-flex flex-column justify-content-between align-items-center">
+    <i className="fa-solid fa-graduation-cap s50 c-prim-blue"></i>
+    <ul className="d-flex flex-column gap-3">
+        <li className="c-light-black px-4 trans3 Active">
+            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700">Notes</span>
+        </li>
+        <li className="c-grey px-4 trans3">
+            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700">Notes</span>
+        </li>
+        <li className="c-grey px-4 trans3">
+            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700">Notes</span>
+        </li>
+        <li className="c-grey px-4 trans3">
+            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700">Notes</span>
+        </li>
+        <li className="c-grey px-4 trans3">
+            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700">Notes</span>
+        </li>
+    </ul>
+    <span className="Help f-center rounded-2 bc-light-blue pointer">
+        <i className="fa-solid fa-circle-question c-scnd-blue trans3 s30"></i>
+    </span>
+</aside>
+<aside className="Content bc-light-grey pt-5 flex-grow-1">
+<header className="px-4 d-flex justify-content-between flex-wrap">
+                    <div className="Welcome">
+                        <h1 className="s40 c-text fw-bold mb-2">Hello UserName!</h1>
+                        <p className="c-grey">Is there anything specific you would like me to look up? </p>
+                    </div>
+                    <div className="Profile d-flex align-items-center gap-3">
+                        <div>
+                            <p className="c-text fw-bold s18">UserName</p>
+                            <p className="c-grey">Student</p>
+                        </div>
+                        <Image src={Avatar} sizes="10vh" alt="haithem" className="rounded-circle" style={{
+        width: '100%',
+        height: 'auto',
+      }}></Image>
+                    </div>
+                    <div className="input-container position-relative w-100 bc-white rounded-pill mx-auto mt-3" style={{flexBasis:'100%'}}>
+                        <i className="fa-solid fa-magnifying-glass position-absolute pointer trans3 s20"></i>
+                        <input type="text" id="input" required={true}/>
+                        <label htmlFor="input" className="label">Search...</label>
+                        <div className="underline"></div>
+                    </div>
+</header>
+
+{children}
+</aside>
+</main>
+
+  </body>
     </html>
   );
 }
