@@ -15,13 +15,15 @@ import Image from "next/image"
 
 export default async function Page() {
     const userInfo:Profile =  await getuserInfo()
+    const date = new Date(userInfo.dateNaissance)
+    const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     return(
       <div className="Box shadow m-4">
         <div className="Profile pt-4">
             <div className="Box d-flex align-items-center gap-3 p-3">
                 <article className="FullName">
                 <Image src={Avatar} width={120} height={120} alt="" className="rounded-circle" />
-                    <p className="c-text fw-bold s20">Lisha Lokwani</p>
+                    <p className="c-text fw-bold s20">{userInfo.nomFr} {userInfo.prenomFr}</p>
                     <p className="c-grey s15">Student</p>
                 </article>
                 <article className="OtherInfo d-flex flex-column gap-3 ms-5 flex-grow-1">
@@ -31,8 +33,8 @@ export default async function Page() {
                             <span >Date of birth</span>
                         </div>
                         <div className="Inputs d-flex gap-3">
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="Ain Kercha" />
-                            <input type="text" className="Input px-2 py-2 rd-5 default" value="2004-02-09"  />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value={"Ain Kercha"} />
+                            <input type="text" className="Input px-2 py-2 rd-5 default" value={formattedDate}  />
                         </div>
                     </div>
                     <div className="Row">
