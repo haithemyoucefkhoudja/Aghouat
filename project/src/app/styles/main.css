@@ -145,6 +145,33 @@ main {
                 background-color: var(--prim-blue);
             }
         }
+        .Profile {
+            img {
+                width: 120px;
+                height: 120px;
+                outline: 2px solid var(--scnd-blue);
+                outline-offset: 2px;
+            }
+            .OtherInfo {
+                .Row {
+                    .Inputs input {
+                        /* border: 1px solid var(--light-grey); */
+                        background-color: rgba(20, 149, 255, 0.1);
+                        font-weight: 600;
+                    }
+                }
+                .Row:first-of-type {
+                    span,input {
+                        width: 320px;
+                    }
+                }
+                .Row:last-of-type {
+                    span,input {
+                        width: 250px;
+                    }
+                }
+            }
+        }
           
     }
 }
