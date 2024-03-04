@@ -9,6 +9,7 @@ import './styles/Icons 6.4.0/css/all.min.css'
 import Image from "next/image";
 import Avatar from "@/public/Avatar.png"
 import { NavBar } from "@/components/nav";
+import Link from "next/link";
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,9 +19,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params:string
 }>) {
+  console.log(params)
   return (
 
     <html lang="en">
@@ -32,24 +36,34 @@ export default function RootLayout({
     <i className="fa-solid fa-graduation-cap s50 c-prim-blue"></i>
     <ul className="d-flex flex-column gap-3">
         <li className="c-light-black px-4 trans3 Active">
-            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
-            <span className="s18 w-700">Notes</span>
+        <i className="fa-solid fa-file-pen w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700 tw-my-4">
+              <Link href={'/Bac'}>
+              Notes BAC
+              </Link>
+              </span>
         </li>
         <li className="c-grey px-4 trans3">
             <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
-            <span className="s18 w-700">Notes</span>
+            <span className="s18 w-700 tw-my-4">
+            <Link href={'/Groups'}>
+              Groups
+              </Link>
+            </span>
         </li>
         <li className="c-grey px-4 trans3">
             <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
-            <span className="s18 w-700">Notes</span>
+            <span className="s18 w-700 tw-my-4">Notes</span>
         </li>
         <li className="c-grey px-4 trans3">
             <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
-            <span className="s18 w-700">Notes</span>
+            <span className="s18 w-700 tw-my-4">Notes</span>
         </li>
         <li className="c-grey px-4 trans3">
-            <i className="fa-solid fa-graduation-cap w-fit d-block mx-auto s18"></i>
-            <span className="s18 w-700">Notes</span>
+        <i className="fa-solid fa-user w-fit d-block mx-auto s18"></i>
+            <span className="s18 w-700 tw-my-4 "><Link href={'/Profile'}>
+            Profile
+              </Link></span>
         </li>
     </ul>
     <span className="Help f-center rounded-2 bc-light-blue pointer">
